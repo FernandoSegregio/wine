@@ -2,6 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
+  @font-face {
+    font-family: 'Neo Sans';
+    src: url('/fonts/neo-sans-std-regular.otf') format('otf');
+  }
+
   :root {
 
     --font-size-10: 0.625rem; /* 10px */
