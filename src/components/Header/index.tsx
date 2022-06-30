@@ -6,6 +6,7 @@ import {
 } from './style'
 import logoWine from '../../../public/images/header/logo-wine.svg';
 import searchIcon from '../../../public/images/header/search.svg';
+import countIcon from '../../../public/images/header/count.svg';
 
 function Header() {
   return (
@@ -28,6 +29,12 @@ function Header() {
         alt="Search icon"
         width={56}
         height={56}
+      />
+      <Image
+        src={countIcon}
+        alt="Count Icon"
+        width={56}
+        height={56.15}
       />
     </HeaderContainer>
   )
