@@ -6,5 +6,8 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
+  
+    ul {
+      display: flex;
+    }
 `;
