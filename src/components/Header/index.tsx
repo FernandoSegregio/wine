@@ -1,16 +1,18 @@
 import React from 'react'
 import ItemsNav from '../../helpers/ItemsNav'
-import { HeaderContainer, Nav } from './style'
+import {
+  HeaderContainer, Nav, Ul,
+} from './style'
 
 function Header() {
   return (
     <HeaderContainer>
       <Nav>
-        <ul>
+        <Ul>
           { ItemsNav.map((item) => (
             <li>{item}</li>
           ))}
-        </ul>
+        </Ul>
       </Nav>
     </HeaderContainer>
   )
