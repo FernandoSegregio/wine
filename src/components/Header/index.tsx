@@ -7,6 +7,7 @@ import {
 import logoWine from '../../../public/images/header/logo-wine.svg';
 import searchIcon from '../../../public/images/header/search.svg';
 import countIcon from '../../../public/images/header/count.svg';
+import cartIcon from '../../../public/images/header/cart.svg';
 
 function Header() {
   return (
@@ -35,6 +36,12 @@ function Header() {
         alt="Count Icon"
         width={56}
         height={56.15}
+      />
+      <Image
+        src={cartIcon}
+        alt="Cart Icon"
+        width={56}
+        height={56}
       />
     </HeaderContainer>
   )
