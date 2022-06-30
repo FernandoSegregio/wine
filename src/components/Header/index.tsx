@@ -1,9 +1,18 @@
 import React from 'react'
-import HeaderContainer from './style'
+import ItemsNav from '../../helpers/ItemsNav'
+import { HeaderContainer, Nav } from './style'
 
 function Header() {
   return (
-    <HeaderContainer>Header</HeaderContainer>
+    <HeaderContainer>
+      <Nav>
+        <ul>
+          { ItemsNav.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </Nav>
+    </HeaderContainer>
   )
 }
 
