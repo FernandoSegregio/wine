@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemsNav from '../../helpers/ItemsNav'
 import {
-  HeaderContainer, Nav, Ul,
+  HeaderContainer, Nav, Ul, Li,
 } from './style'
 
 function Header() {
@@ -10,7 +10,7 @@ function Header() {
       <Nav>
         <Ul>
           { ItemsNav.map((item) => (
-            <li>{item}</li>
+            <Li>{item}</Li>
           ))}
         </Ul>
       </Nav>
