@@ -7,7 +7,8 @@ export const HeaderContainer = styled.header`
 
 export const Nav = styled.nav`
   
-    ul {
-      display: flex;
-    }
+`;
+
+export const Ul = styled.ul`
+  display: flex;
 `;
