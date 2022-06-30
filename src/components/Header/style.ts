@@ -6,7 +6,12 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Nav = styled.nav`
-  
+  width: 100%
+`;
+
+export const Li = styled.li`
+  list-style: none;
+  cursor: pointer;
 `;
 
 export const Ul = styled.ul`
