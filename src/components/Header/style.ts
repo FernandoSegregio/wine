@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Nav = styled.nav`
-  width: 100%
+  width: 100%;
 `;
 
 export const Ul = styled.ul`
@@ -16,6 +16,7 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   cursor: pointer;
+  font-family: Neo Sans, sans-serif;
   font-size: var(--font-size-18);
   list-style: none;
 `;
