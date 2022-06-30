@@ -9,11 +9,12 @@ export const Nav = styled.nav`
   width: 100%
 `;
 
-export const Li = styled.li`
-  list-style: none;
-  cursor: pointer;
+export const Ul = styled.ul`
+  column-gap: 48px;
+  display: flex;
 `;
 
-export const Ul = styled.ul`
-  display: flex;
+export const Li = styled.li`
+  cursor: pointer;
+  list-style: none;
 `;
