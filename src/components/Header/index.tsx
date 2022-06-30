@@ -10,7 +10,7 @@ function Header() {
       <Nav>
         <Ul>
           { ItemsNav.map((item) => (
-            <Li>{item}</Li>
+            <Li key={item}>{item}</Li>
           ))}
         </Ul>
       </Nav>
