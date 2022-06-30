@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link href="https://img.wine.com.br/fenix/image/_big_bang/icons/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Saira:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
       <GlobalStyle />
       <Header />
