@@ -5,6 +5,7 @@ import {
   HeaderContainer, Nav, Ul, Li,
 } from './style'
 import logoWine from '../../../public/images/header/logo-wine.svg';
+import searchIcon from '../../../public/images/header/search.svg';
 
 function Header() {
   return (
@@ -22,6 +23,12 @@ function Header() {
           ))}
         </Ul>
       </Nav>
+      <Image
+        src={searchIcon}
+        alt="Search icon"
+        width={56}
+        height={56}
+      />
     </HeaderContainer>
   )
 }
