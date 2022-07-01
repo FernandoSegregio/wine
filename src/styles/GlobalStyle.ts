@@ -53,6 +53,10 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
   
+  body {
+    background-color: var(--brand-color-white-150);
+  }
+
   button {
     cursor: pointer;
   }
