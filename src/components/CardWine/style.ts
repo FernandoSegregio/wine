@@ -69,5 +69,15 @@ export const MemberPriceContainer = styled.div`
   justify-content: center;
   `;
 
+export const Member = styled.p`
+  color: var(--brand-color-gray-400);
+  font-family: 'Lato';
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-bold);
+  line-height: 10px;
+  padding-top: 4px;
+  text-align: center;
+`;
+
   color: var(--brand-color-gray-100);
 `;
