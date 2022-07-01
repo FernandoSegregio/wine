@@ -50,5 +50,17 @@ export const ValueDiscount = styled.p`
   text-decoration-line: line-through;
 `;
 
+export const PercentDiscount = styled.p`
+  background-color: var(--brand-color-orange-100);
+  border-radius: 1.94677px;
+  font-family: 'Lato';
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-10);
+  line-height: 12px;
+  text-align: center;
+  padding: calc((13.63px - 12px) / 2) calc((48.67px - 40.81px) / 2);
+  color: var(--brand-color-white-100);
+`;
+
   color: var(--brand-color-gray-100);
 `;
