@@ -115,4 +115,18 @@ export const NonMember = styled.p`
   text-align: center;
 `;
 
+export const ButtonAdd = styled.button`
+  background: var(--brand-color-green-100);
+  border: none;
+  border-radius: 3.89354px;
+  box-shadow: 0px 0.973384px 1.94677px rgba(0, 0, 0, 0.2);
+  color: var(--brand-color-white-100);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-bold);
+  gap: 9.73px;
+  height: 39.36px;
+  line-height: 16px;
+  padding: 11.6806px 23.3612px;
+  text-align: center;
+  width: 256px;
 `;
