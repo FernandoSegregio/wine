@@ -10,6 +10,11 @@ const AsideContainer = styled.aside`
     margin-bottom: 32px;
   }
 
+  input {
+    height: 16px;
+    width: 15.89px;
+  }
+
   p {
     color: var(--brand-color-gray-300);
     font-family: Lato;
