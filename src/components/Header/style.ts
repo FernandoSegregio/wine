@@ -24,7 +24,8 @@ export const IconsHeader = styled.div`
 `;
 
 export const Nav = styled.nav`
-  width: 100%;
+  align-items: center;
+  display: flex;
 `;
 
 export const Ul = styled.ul`
