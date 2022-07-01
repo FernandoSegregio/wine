@@ -7,6 +7,7 @@ const AsideContainer = styled.aside`
     font-size: var(-font-size-20);
     font-weight: var(--font-weight-bold);
     line-height: 24px;
+    margin-bottom: 32px;
   }
 
   p {
