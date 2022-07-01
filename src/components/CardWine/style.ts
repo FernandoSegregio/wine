@@ -15,9 +15,25 @@ export const CardContainer = styled.div`
   row-gap: 16px;
   position: relative;
   
+    section {
+      align-items: center;
+      background-color: var(--brand-color-white-100);
       box-shadow: 0px 9.73384px 14.6008px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 256px;
+      padding-bottom: 18px;
       height: 333px;
-  width: 256px;
+      position: relative;
+
+      & > span:nth-of-type(2) {
+        position: absolute !important;   
+        right: 20.44px;
+        top: 140.19px;
+      }
+    }
+
 `;
 
 export const Name = styled.h1`
@@ -77,6 +93,16 @@ export const Member = styled.p`
   line-height: 10px;
   padding-top: 4px;
   text-align: center;
+`;
+
+export const Price = styled.p`
+  color: var(--brand-color-pink-100);
+  font-family: 'Lato';
+  font-size: var(--font-size-23);
+  font-weight: var(--font-weight-bold);
+  line-height: 27.25px;
+  text-align: center;
+  
 `;
 
   color: var(--brand-color-gray-100);
