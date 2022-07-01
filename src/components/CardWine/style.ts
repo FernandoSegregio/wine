@@ -25,3 +25,7 @@ export const Name = styled.h1`
   text-align: center;
   width: 232.64px;
 `;
+export const DiscountContainer = styled.div`
+  align-items: center; 
+  display: flex;
+`;
