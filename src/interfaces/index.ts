@@ -21,3 +21,6 @@ export interface WineProps {
   wines: ApiItems[];
 }
 
+export interface HomeProps extends WineProps {
+  totalProduct: number;
+}
