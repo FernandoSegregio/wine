@@ -42,7 +42,7 @@ export const Li = styled.li`
   font-family: Neo Sans, sans-serif;
   font-size: var(--font-size-18);
   list-style: none;
-  padding: 28px 4px 34px;
+  padding: 34px 4px;
   height: 86px;
 
     &:hover {
