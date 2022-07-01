@@ -62,5 +62,12 @@ export const PercentDiscount = styled.p`
   color: var(--brand-color-white-100);
 `;
 
+export const MemberPriceContainer = styled.div`
+  align-items: center; 
+  column-gap: 6.81px;
+  display: flex;
+  justify-content: center;
+  `;
+
   color: var(--brand-color-gray-100);
 `;
