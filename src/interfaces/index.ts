@@ -17,3 +17,7 @@ export interface ApiItems {
   sommelierComment: string;
 }
 
+export interface WineProps {
+  wines: ApiItems[];
+}
+
