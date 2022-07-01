@@ -14,6 +14,10 @@ export const LogoAndNav = styled.div`
 `;
 
 export const IconsHeader = styled.div`
+  display: flex;
+  height: 56px;
+  justify-content: space-between;
+  width: 254.97px;
 `;
 
 export const Nav = styled.nav`
