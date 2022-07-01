@@ -29,3 +29,13 @@ export const DiscountContainer = styled.div`
   align-items: center; 
   display: flex;
 `;
+
+export const ValueDiscount = styled.p`
+  font-family: 'Lato';
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-11);
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: line-through;
+  color: var(--brand-color-gray-100);
+`;
