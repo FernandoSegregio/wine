@@ -20,16 +20,19 @@ const AsideContainer = styled.aside`
     font-family: Lato;
     font-size: var(-font-size-18);
     font-weight: var(--font-weight-bold);
-    line-height: 22px
+    line-height: 22px;
+    margin-bottom: 16px;
   }
 
   label {
+    align-items: center;
     display: flex;
     color: var(--brand-color-gray-300);
     font-family: Lato;
     font-size: var(-font-size-14);
     font-weight: var(--font-weight-normal);
-    line-height: 17px
+    line-height: 42px;
+    column-gap: 13.72px;
   }
 `;
 
