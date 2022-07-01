@@ -103,6 +103,14 @@ export const Price = styled.p`
   line-height: 27.25px;
   text-align: center;
   
+    & > span {
+      line-height: 10px;
+      font-size: 15.57px;
+    }
+
+    & > span:nth-of-type(1) {
+      font-size: var(--font-size-11);
+    }
 `;
 
 export const NonMember = styled.p`
