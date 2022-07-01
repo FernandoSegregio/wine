@@ -105,5 +105,14 @@ export const Price = styled.p`
   
 `;
 
+export const NonMember = styled.p`
   color: var(--brand-color-gray-100);
+  font-family: 'Lato';
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-bold);
+  line-height: 14px;
+  text-align: center;
+  text-align: center;
+`;
+
 `;
