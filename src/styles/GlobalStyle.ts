@@ -21,11 +21,16 @@ const GlobalStyle = createGlobalStyle`
     --font-size-28: 1.75rem; /* 28px */ 
     --font-size-32: 2rem; /* 32px */
 
-
+    --font-weight-300: 300;
+    --font-weight-500: 500;
+    --font-weight-600: 600; 
+    --font-weight-bold: bold;
+    --font-weight-normal: normal;
 
     --brand-color-white-100: #FFFFFF;
+    --brand-color-white-150: #F5F5F5;
     --brand-color-white-200: #F5F8FA;
-
+    
     --brand-color-black-200: #000000;
     
     --brand-color-gray-default: #555555;
