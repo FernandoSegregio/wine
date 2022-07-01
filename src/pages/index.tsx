@@ -17,7 +17,7 @@ export default function Home({ wines, totalProduct }: HomeProps) {
         <Aside />
         <main>
           <h1>
-            {totalProduct}
+            <span>{totalProduct}</span>
             {' '}
             produtos encontrados
           </h1>
