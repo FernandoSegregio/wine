@@ -27,11 +27,14 @@ export const IconsHeader = styled.div`
 export const Nav = styled.nav`
   align-items: center;
   display: flex;
+  height: 88.23px;
 `;
 
 export const Ul = styled.ul`
   column-gap: 48px;
   display: flex;
+  align-items: center;
+  height: 88.23px;
 `;
 
 export const Li = styled.li`
@@ -39,4 +42,11 @@ export const Li = styled.li`
   font-family: Neo Sans, sans-serif;
   font-size: var(--font-size-18);
   list-style: none;
+  padding: 28px 4px 34px;
+  height: 86px;
+
+    &:hover {
+      color: var(--brand-color-pink-100);
+      border-bottom: 2px solid var(--brand-color-pink-100);
+    }
 `;
