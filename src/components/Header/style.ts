@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   align-items: center;
+  background-color: var(--brand-color-white-100);
+  border-bottom: 2px solid var(--brand-color-gray-050);
   column-gap: 217.13px;
   display: flex;
   height: 88.23px;
   justify-content: center;
   width: 100%;
-  border-bottom: 2px solid var(--brand-color-gray-050);
 `;
 
 export const LogoAndNav = styled.div`
