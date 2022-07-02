@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
     
     --brand-color-gray-default: #555555;
     --brand-color-gray-050: #CCCCCC;
-    --brand-color-gray-050: #C0C0C0;
+    --brand-color-gray-075: #C0C0C0;
     --brand-color-gray-100: #888888;
     --brand-color-gray-200: #666666;
     --brand-color-gray-300: #333333;
@@ -45,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
     --brand-color-green-100:  #7EBC43;
     --brand-color-orange-100:  #F79552;
     --brand-color-yellow-100:  #F9B950;
+    --brand-color-pink-050:  #b6116e61;
     --brand-color-pink-100:  #B6116E;
   }
    
