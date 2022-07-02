@@ -50,7 +50,7 @@ function Header({ setOpen }) {
         </button>
         <button
           type="button"
-          onClick={() => setOpen(false)}
+          onClick={() => setOpen(true)}
         >
           <Image
             src={cartIcon}

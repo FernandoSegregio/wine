@@ -10,7 +10,7 @@ import GlobalStyle from '../styles/GlobalStyle';
 import Container from './_style';
 
 export default function Home({ wines, totalProduct }: HomeProps) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <>
       <GlobalStyle />
