@@ -22,4 +22,23 @@ export const HeaderCart = styled.header`
   background-color: var(--brand-color-white-100);
   display: flex;
   padding: 20px;
+
+    > svg {
+      font-size: 22px;
+      margin-right: 20px;
+    }
+
+    > p {
+    font-family: sans-serif;
+    color: var(---brand-color-black-200);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-normal);
+    } 
+
+    > span {
+    font-family: sans-serif;
+    color: var(---brand-color-black-200);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-normal);
+    } 
 `;
