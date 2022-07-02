@@ -56,14 +56,14 @@ export const HeaderCart = styled.header`
     }
 
     & > p {
-    color: var(---brand-color-black-200);
+    color: var(--brand-color-black-200);
     font-family: sans-serif;
     font-size: var(--font-size-20);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-600);
     } 
 
     > span {
-    color: var(---brand-color-black-200);
+    color: var(--brand-color-black-200);
     font-family: sans-serif;
     font-size: var(--font-size-20);
     font-weight: var(--font-weight-normal);
