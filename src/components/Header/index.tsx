@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
-import ItemsNav from '../../helpers/ItemsNav';
+import Link from 'next/link';
+import ItemsNav from '../../utils/ItemsNav';
 import {
   HeaderContainer, Nav, Ul, Li, IconsHeader, LogoAndNav,
 } from './style'
@@ -21,11 +22,11 @@ function Header({ setOpen }) {
         />
         <Nav>
           <Ul>
-            { ItemsNav.map((item) => (
-              <Li key={item}>
-                <a href="/loja-vinhos">
-                  {item}
-                </a>
+            { ItemsNav.map(({ name, pathName }) => (
+              <Li key={name} className={pathName}>
+                <Link href={`./${pathName}`}>
+                  {name}
+                </Link>
               </Li>
             ))}
           </Ul>
