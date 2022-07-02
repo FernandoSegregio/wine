@@ -9,10 +9,12 @@ import logoWine from '../../../public/images/header/logo-wine.svg';
 import searchIcon from '../../../public/images/header/search.svg';
 import countIcon from '../../../public/images/header/count.svg';
 import cartIcon from '../../../public/images/header/cart.svg';
+import Search from '../SearchBar';
 
 function Header({ setOpen }) {
   return (
     <HeaderContainer>
+      <Search />
       <LogoAndNav>
         <Image
           src={logoWine}
