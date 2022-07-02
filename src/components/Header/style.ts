@@ -45,8 +45,16 @@ export const Li = styled.li`
   padding: 34px 4px;
   height: 86px;
 
-    &:hover {
-      color: var(--brand-color-pink-100);
-      border-bottom: 2px solid var(--brand-color-pink-100);
-    }
+  &:hover {
+    border-bottom: 2px solid var(--brand-color-pink-100);
+  }
+    > a {
+      color: var(--brand-color-gray-default);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--brand-color-pink-100);
+      }
+    } 
+
 `;
