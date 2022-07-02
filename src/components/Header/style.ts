@@ -21,7 +21,6 @@ export const HeaderContainer = styled.header`
 export const LogoAndNav = styled.div`
   column-gap: 83.15px;
   display: flex;
-  width: 665.10px;
 `;
 
 export const IconsHeader = styled.div`
