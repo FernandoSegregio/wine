@@ -1,9 +1,14 @@
 import React from 'react'
+import { VscSearch } from 'react-icons/vsc'
 import SearchContainer from './style'
 
 function Search() {
   return (
-    <SearchContainer>Search</SearchContainer>
+    <SearchContainer>
+      <input type="text" placeholder="Pesquisar" />
+      <VscSearch />
+
+    </SearchContainer>
   )
 }
 
