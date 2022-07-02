@@ -4,7 +4,7 @@ const AsideContainer = styled.aside`
   h1 {
     color: var(--brand-color-black-200);
     font-family: Lato;
-    font-size: var(-font-size-20);
+    font-size: var(--font-size-20);
     font-weight: var(--font-weight-bold);
     line-height: 24px;
     margin-bottom: 32px;
@@ -18,7 +18,7 @@ const AsideContainer = styled.aside`
   p {
     color: var(--brand-color-gray-300);
     font-family: Lato;
-    font-size: var(-font-size-18);
+    font-size: var(--font-size-18);
     font-weight: var(--font-weight-bold);
     line-height: 22px;
     margin-bottom: 16px;
@@ -29,7 +29,7 @@ const AsideContainer = styled.aside`
     display: flex;
     color: var(--brand-color-gray-300);
     font-family: Lato;
-    font-size: var(-font-size-14);
+    font-size: var(--font-size-14);
     font-weight: var(--font-weight-normal);
     line-height: 42px;
     column-gap: 13.72px;
