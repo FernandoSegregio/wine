@@ -22,6 +22,11 @@ export const IconsHeader = styled.div`
   height: 56px;
   justify-content: space-between;
   width: 254.97px;
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
 `;
 
 export const Nav = styled.nav`
