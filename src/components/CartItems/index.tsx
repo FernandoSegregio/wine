@@ -12,6 +12,12 @@ function Cart({ open, setOpen }) {
         <p>WineBox</p>
         <span>(0)</span>
       </HeaderCart>
+      <section>
+        <p>
+          =(
+        </p>
+        <p>Você ainda não escolheu seus produtos</p>
+      </section>
     </CartContainer>
   )
 }
