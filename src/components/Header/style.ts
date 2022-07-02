@@ -9,6 +9,13 @@ export const HeaderContainer = styled.header`
   height: 88.23px;
   justify-content: center;
   width: 100%;
+
+  .loja-vinhos {
+      border-bottom: 4px solid var(--brand-color-pink-100);
+      > a {
+        color: var(--brand-color-pink-100)
+      };
+    }
 `;
 
 export const LogoAndNav = styled.div`
@@ -52,14 +59,13 @@ export const Li = styled.li`
 
   &:hover {
     border-bottom: 2px solid var(--brand-color-pink-100);
+
+    > a {
+      color: var(--brand-color-pink-100);
+    }
   }
     > a {
       color: var(--brand-color-gray-default);
       text-decoration: none;
-
-      &:hover {
-        color: var(--brand-color-pink-100);
-      }
     } 
-
 `;
