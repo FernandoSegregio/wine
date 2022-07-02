@@ -16,3 +16,10 @@ export const CartContainer = styled.div`
   -webkit-transition-delay: 0s;
   width: 350px;
 `;
+
+export const HeaderCart = styled.header`
+  height: 60px;
+  background-color: var(--brand-color-white-100);
+  display: flex;
+  padding: 20px;
+`;
