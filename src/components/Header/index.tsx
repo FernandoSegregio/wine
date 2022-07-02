@@ -22,7 +22,11 @@ function Header() {
         <Nav>
           <Ul>
             { ItemsNav.map((item) => (
-              <Li key={item}>{item}</Li>
+              <Li key={item}>
+                <a href="/loja-vinhos">
+                  {item}
+                </a>
+              </Li>
             ))}
           </Ul>
         </Nav>
