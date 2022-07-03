@@ -5,17 +5,18 @@ import Aside from '../components/Aside';
 import Cart from '../components/CartItems';
 import Grid from '../components/GridWine';
 import Header from '../components/Header';
+import Search from '../components/SearchBar';
 import { HomeProps } from '../interfaces';
 import GlobalStyle from '../styles/GlobalStyle';
 import Container from './_style';
 
 export default function Home({ wines, totalProduct }: HomeProps) {
-  const [open, setOpen] = useState(false);
   return (
     <>
       <GlobalStyle />
-      <Cart open={open} setOpen={setOpen} />
-      <Header setOpen={setOpen} />
+      <Cart />
+      <Search />
+      <Header />
       <Container>
         <Aside />
         <main>
@@ -36,7 +37,6 @@ export default function Home({ wines, totalProduct }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await axios.get('https://wine-back-test.herokuapp.com/products?page=1&limit=9');
-  console.log(data.totalItems);
 
   return {
     props: {

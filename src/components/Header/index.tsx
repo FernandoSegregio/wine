@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import ItemsNav from '../../utils/ItemsNav';
@@ -10,11 +10,17 @@ import searchIcon from '../../../public/images/header/search.svg';
 import countIcon from '../../../public/images/header/count.svg';
 import cartIcon from '../../../public/images/header/cart.svg';
 import Search from '../SearchBar';
+import { WineContext } from '../../context/wine';
 
-function Header({ setOpen }) {
+function Header() {
+  const { setOpenCart, setOpenSearch, openSearch } = useContext(WineContext);
+
+  function openAndCloseSearch() {
+    return openSearch ? setOpenSearch(false) : setOpenSearch(true);
+  }
+
   return (
     <HeaderContainer>
-      <Search />
       <LogoAndNav>
         <Image
           src={logoWine}
@@ -35,7 +41,10 @@ function Header({ setOpen }) {
         </Nav>
       </LogoAndNav>
       <IconsHeader>
-        <button type="button">
+        <button
+          type="button"
+          onClick={() => openAndCloseSearch()}
+        >
           <Image
             src={searchIcon}
             alt="Search icon"
@@ -43,7 +52,9 @@ function Header({ setOpen }) {
             height={56}
           />
         </button>
-        <button type="button">
+        <button
+          type="button"
+        >
           <Image
             src={countIcon}
             alt="Count Icon"
@@ -53,7 +64,7 @@ function Header({ setOpen }) {
         </button>
         <button
           type="button"
-          onClick={() => setOpen(true)}
+          onClick={() => setOpenCart(true)}
         >
           <Image
             src={cartIcon}

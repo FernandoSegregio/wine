@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BsArrowLeft } from 'react-icons/bs'
+import { WineContext } from '../../context/wine';
 import { CartContainer, HeaderCart } from './style';
 
-function Cart({ open, setOpen }) {
+function Cart() {
+  const { openCart, setOpenCart } = useContext(WineContext);
+
   return (
-    <CartContainer hidden={!open}>
+    <CartContainer hidden={!openCart}>
       <HeaderCart>
-        <button type="button" onClick={() => setOpen(false)}>
+        <button type="button" onClick={() => setOpenCart(false)}>
           <BsArrowLeft />
         </button>
         <p>WineBox</p>
