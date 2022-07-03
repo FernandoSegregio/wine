@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     --font-weight-500: 500;
     --font-weight-600: 600; 
     --font-weight-bold: bold;
+    --font-weight-900: 900;
     --font-weight-normal: normal;
 
     --brand-color-white-100: #FFFFFF;
