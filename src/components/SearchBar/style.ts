@@ -13,15 +13,16 @@ const SearchContainer = styled.div`
   justify-content: center;
 
     input {
-      font-family: Lato;
-      height: 44px;
-      width: 1160px;
-      border: unset;
       border-radius: 4px;
-      padding-left: 30px;
-      font-weight: var(--font-weight-bold);
+      border: unset;
       color: var(--brand-color-gray-200);
+      font-family: Lato;
       font-size: var(--font-size-20);
+      font-weight: var(--font-weight-bold);
+      height: 44px;
+      outline: none;
+      padding-left: 30px;
+      width: 1160px;
     }
 
     svg {
