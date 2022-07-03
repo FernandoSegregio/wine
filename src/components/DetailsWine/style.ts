@@ -16,11 +16,11 @@ export const DetailsContainer = styled.div`
           & > p {
             margin-left: 16px;
             font-family: Neo Sans;
-            font-style: normal;
+    
             font-weight: 400;
-            font-size: 20px;
+            font-size: var(--font-size-20);
             line-height: 24px;
-            color: #111111;
+            color: var(--brand-color-black-100);
           }
 
           & > svg {
@@ -37,9 +37,18 @@ export const ImageContainer = styled.div`
   width: 381px;
 `;
 
+export const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const OriginAndTypeContainer = styled.div`
-  height: 108px;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  justify-content: space-around;
   width: 462.22px;
+  
 `;
 
 export const PriceContainer = styled.div`
