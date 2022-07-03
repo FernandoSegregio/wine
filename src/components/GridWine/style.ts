@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const GridContainer = styled.div`
+export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
@@ -8,4 +8,13 @@ const GridContainer = styled.div`
   gap: 32px;
 `;
 
-export default GridContainer;
+export const ViewMore = styled.button`
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: var(--font-size-18);
+  text-align: center;
+  text-decoration: underline;
+  padding: 60px;
+    
+`;
