@@ -22,7 +22,7 @@ function Search() {
     e.preventDefault();
 
     const filterWines = wines
-      .filter(({ name }) => name.normalize('NFD' as string).replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '').toLowerCase().includes(wineSearch));
+      .filter(({ name }: string | any) => name.normalize('NFD' as string).replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '').toLowerCase().includes(wineSearch));
     setWinesFiltered(filterWines);
   }
 
