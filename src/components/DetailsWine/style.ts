@@ -5,13 +5,16 @@ export const DetailsContainer = styled.div`
   grid-template-columns: 832px 1fr;
   height: 731px;
 
-    & > div {
+      & > div {
       margin: 30.77px auto;
       width: 100%;
         
         & > span {
         display: flex;
         margin-left: 16%;
+        cursor: pointer;
+        width: 106px;
+     
 
           & > p {
             margin-left: 16px;
