@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DetailsContainer = styled.div`
   display: grid;
-  grid-template-columns: 670px 1fr;
+  grid-template-columns: 832px 1fr;
   height: 731px;
 
     & > div {
@@ -11,7 +11,7 @@ export const DetailsContainer = styled.div`
         
         & > span {
         display: flex;
-        margin-left: 19%;
+        margin-left: 16%;
 
           & > p {
             margin-left: 16px;
@@ -32,7 +32,22 @@ export const DetailsContainer = styled.div`
 
 export const ImageContainer = styled.div`
   height: 579px;
-  margin-left: 41%;
+  margin-left: 33%;
   margin-top: 50px;
   width: 381px;
+`;
+
+export const OriginAndTypeContainer = styled.div`
+  height: 108px;
+  width: 462.22px;
+`;
+
+export const PriceContainer = styled.div`
+  height: 59px;
+  width: 462.22px;
+`;
+
+export const SommelierContainer = styled.div`
+  height: 137px;
+  width: 462.22px;
 `;
