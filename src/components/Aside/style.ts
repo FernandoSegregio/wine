@@ -25,6 +25,7 @@ export const AsideContainer = styled.aside`
 export const BorderInput = styled.label`
   display: flex;
   position: relative;
+  cursor: pointer;
 
       span {
       color: var(--brand-color-gray-300);
@@ -32,7 +33,9 @@ export const BorderInput = styled.label`
       font-size: var(--font-size-14);
       font-weight: var(--font-weight-normal);
       line-height: 42px;   
-      margin-left: 31.6px;  
+      margin-left: 31.6px;
+      
+      
 
         &:hover {
           color: var(--brand-color-pink-100);
