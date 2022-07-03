@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 
 interface Open {
+  [x: string]: any;
   openCart?: boolean;
   openSearch?: boolean;
   wines: [];
