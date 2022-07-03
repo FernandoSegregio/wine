@@ -1,6 +1,9 @@
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useContext, useEffect } from 'react'
+import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import { WineContext } from '../../context/wine';
+import { DetailsContainer, ImageContainer } from './style';
 
 function DetailsWine() {
   const { wines } = useContext(WineContext)
@@ -13,7 +16,17 @@ function DetailsWine() {
     console.log('sou eu', wine)
   }, [])
   return (
-    <div>Details</div>
+    <DetailsContainer>
+      <div>
+        <span>
+          <MdOutlineArrowBackIosNew />
+          <p>Voltar</p>
+        </span>
+        <ImageContainer>
+          <Image src={wine.image} alt={wine.name} width={381} height={579} />
+        </ImageContainer>
+      </div>
+    </DetailsContainer>
   )
 }
 
