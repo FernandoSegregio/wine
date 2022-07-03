@@ -3,10 +3,10 @@ import { WineProps } from '../../interfaces'
 import Card from '../CardWine'
 import GridContainer from './style'
 
-function Grid({ wines }: WineProps) {
+function Grid({ winesApi }: WineProps) {
   return (
     <GridContainer>
-      <Card wines={wines} />
+      <Card winesApi={winesApi} />
     </GridContainer>
   )
 }
