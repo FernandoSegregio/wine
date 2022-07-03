@@ -7,7 +7,7 @@ function DetailsWine() {
   const { asPath } = useRouter();
   const idActual = asPath.split('vinho-')[1];
 
-  const wine = wines.find((item) => item.id === Number(idActual));
+  const wine = wines.find((item: { id: number; }) => item.id === Number(idActual));
 
   useEffect(() => {
     console.log('sou eu', wine)
