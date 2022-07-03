@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import Image from 'next/image';
 import Router from 'next/router';
+import { useCookies } from 'react-cookie';
 import {
   ImageStyle,
   CardContainer,
@@ -18,8 +20,17 @@ import { WineProps } from '../../interfaces';
 import blackIcon from '../../../public/images/card/black-wine.svg';
 
 function Card({ winesApi }: WineProps) {
+  const [cookie, setCookie] = useCookies<string>(['wine']);
+
   function nextDetailsWine(id: number) {
-    Router.push({ pathname: `/loja-vinho-${id}` })
+    const wine = winesApi.find((item: { id: number; }) => item.id === id);
+
+    setCookie('wine', JSON.stringify(wine), {
+      path: '/loja-vinhos',
+      maxAge: 3600, // Expires after 1hr
+      sameSite: true,
+    })
+    Router.push({ pathname: `/loja-vinhos/${id}` })
   }
 
   return (

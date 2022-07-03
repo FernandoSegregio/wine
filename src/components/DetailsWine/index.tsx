@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useContext } from 'react'
+import React from 'react'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import { RiArrowRightSLine } from 'react-icons/ri'
-import { WineContext } from '../../context/wine';
 import {
   DetailsContainer,
   ImageContainer,
@@ -14,12 +12,9 @@ import {
   Details,
 } from './style';
 
-function DetailsWine() {
-  const { wines } = useContext(WineContext)
-  const { asPath } = useRouter();
-
-  const idActual = asPath.split('vinho-')[1];
-  const wine = wines.find((item: { id: number; }) => item.id === Number(idActual));
+function DetailsWine(props: { wineItem: string; }) {
+  const { wineItem } = props
+  const wine = JSON.parse(wineItem)
 
   return (
     <DetailsContainer>

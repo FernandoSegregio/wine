@@ -9,7 +9,6 @@ import logoWine from '../../../public/images/header/logo-wine.svg';
 import searchIcon from '../../../public/images/header/search.svg';
 import countIcon from '../../../public/images/header/count.svg';
 import cartIcon from '../../../public/images/header/cart.svg';
-import Search from '../SearchBar';
 import { WineContext } from '../../context/wine';
 
 function Header() {
