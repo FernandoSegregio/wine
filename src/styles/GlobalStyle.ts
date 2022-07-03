@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     --brand-color-white-150: #F5F5F5;
     --brand-color-white-200: #F5F8FA;
     
+    --brand-color-black-100: #111111;
     --brand-color-black-200: #000000;
     
     --brand-color-gray-default: #555555;
