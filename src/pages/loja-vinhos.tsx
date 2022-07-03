@@ -1,19 +1,25 @@
 import axios from 'axios';
 import { GetStaticProps } from 'next';
-import React, { useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Aside from '../components/Aside';
 import Cart from '../components/CartItems';
 import Grid from '../components/GridWine';
 import Header from '../components/Header';
 import Search from '../components/SearchBar';
+import { WineContext } from '../context/wine';
 import { HomeProps } from '../interfaces';
 import GlobalStyle from '../styles/GlobalStyle';
 import Container from './_style';
 
-export default function Home({ wines, totalProduct }: HomeProps) {
+export default function Home({ winesApi, totalProduct }: HomeProps) {
+  const { setWines } = useContext(WineContext);
+
+  useEffect(() => {
+    setWines(winesApi)
+  }, [winesApi])
+
   return (
     <>
-      <GlobalStyle />
       <Cart />
       <Search />
       <Header />
@@ -25,7 +31,7 @@ export default function Home({ wines, totalProduct }: HomeProps) {
             {' '}
             produtos encontrados
           </h1>
-          <Grid wines={wines} />
+          <Grid winesApi={winesApi} />
         </main>
       </Container>
       <footer>
@@ -40,7 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      wines: data.items,
+      winesApi: data.items,
       totalProduct: data.totalItems,
     },
     revalidate: 60 * 60 * 24,
