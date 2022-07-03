@@ -23,7 +23,7 @@ import { WineContext } from '../../context/wine';
 function Card({ winesApi }: WineProps) {
   const [cookie, setCookie] = useCookies<string>(['wine']);
 
-  const { winesFiltered } = useContext(WineContext);
+  const { quantity, setQuantity, winesFiltered } = useContext(WineContext);
 
   function nextDetailsWine(id: number) {
     const wine = winesApi.find((item: { id: number; }) => item.id === id);
@@ -36,7 +36,7 @@ function Card({ winesApi }: WineProps) {
     Router.push({ pathname: `/loja-vinhos/${id}` })
   }
 
-  const renderWines = ((winesFiltered.length > 0) ? winesFiltered : winesApi)
+  const renderWines = ((winesFiltered.length > 0) ? winesFiltered.slice(0, quantity) : winesApi)
 
   return (
     <>
