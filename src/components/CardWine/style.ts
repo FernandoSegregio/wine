@@ -14,6 +14,10 @@ export const CardContainer = styled.div`
   height: 388.36px;
   row-gap: 16px;
   position: relative;
+
+    > button {
+      border: none;
+    }
   
     section {
       align-items: center;
