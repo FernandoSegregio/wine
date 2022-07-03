@@ -18,7 +18,7 @@ export interface ApiItems {
 }
 
 export interface WineProps {
-  wines: ApiItems[];
+  winesApi: ApiItems[];
 }
 
 export interface HomeProps extends WineProps {
