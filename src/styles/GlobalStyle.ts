@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     --font-size-24: 1.5rem; /* 24px */ 
     --font-size-28: 1.75rem; /* 28px */ 
     --font-size-32: 2rem; /* 32px */
+    --font-size-40: 2.5rem; /* 40px */
 
     --font-weight-300: 300;
     --font-weight-500: 500;
