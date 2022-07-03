@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image';
 import Router from 'next/router';
 import { useCookies } from 'react-cookie';
@@ -18,9 +18,12 @@ import {
 } from './style'
 import { WineProps } from '../../interfaces';
 import blackIcon from '../../../public/images/card/black-wine.svg';
+import { WineContext } from '../../context/wine';
 
 function Card({ winesApi }: WineProps) {
   const [cookie, setCookie] = useCookies<string>(['wine']);
+
+  const { winesFiltered } = useContext(WineContext);
 
   function nextDetailsWine(id: number) {
     const wine = winesApi.find((item: { id: number; }) => item.id === id);
@@ -33,9 +36,11 @@ function Card({ winesApi }: WineProps) {
     Router.push({ pathname: `/loja-vinhos/${id}` })
   }
 
+  const renderWines = ((winesFiltered.length > 0) ? winesFiltered : winesApi)
+
   return (
     <>
-      { winesApi.map((item) => (
+      { renderWines.map((item) => (
         <CardContainer key={item.id}>
           <button
             type="button"
