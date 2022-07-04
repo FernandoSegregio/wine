@@ -4,7 +4,7 @@ import Cart from '../../components/CartItems';
 import DetailsWine from '../../components/DetailsWine';
 import Header from '../../components/Header';
 import Search from '../../components/SearchBar';
-import parseCookies from '../../helpers'
+import { parseCookies } from '../../helpers'
 import { DataWine } from '../../interfaces';
 
 function Details({ data }:DataWine) {
