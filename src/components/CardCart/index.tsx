@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import React, { useContext } from 'react'
-import { WineContext } from '../../context/wine'
-import CartCardContainer from './style'
+import React, { useContext } from 'react';
+import { nanoid } from 'nanoid';
+import { WineContext } from '../../context/wine';
+import CartCardContainer from './style';
 
 function CardCart() {
   const { cartList, setCartList } = useContext(WineContext);
@@ -17,7 +18,7 @@ function CardCart() {
     <div>
       {cartList.length > 0 && (
         cartList.map((item) => (
-          <CartCardContainer key={item.id}>
+          <CartCardContainer key={nanoid()}>
             <Image
               src={item.image}
               alt={item.name}
