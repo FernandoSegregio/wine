@@ -16,6 +16,7 @@ export interface ApiItems {
   region: string;
   flag: string;
   sommelierComment: string;
+  quantity?: number;
 }
 
 export interface Wine {
