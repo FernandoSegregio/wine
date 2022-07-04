@@ -21,6 +21,7 @@ export interface ApiItems {
 export interface Wine {
   wineItem: ApiItems;
 }
+
 export interface DataWine {
   data: {wine: string };
 }
