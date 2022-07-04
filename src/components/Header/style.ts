@@ -33,6 +33,27 @@ export const IconsHeader = styled.div`
       background-color: transparent;
       border: none;
     }
+
+    button:nth-of-type(3) {
+      position: relative;
+
+        & > span {
+          background-color: var(--brand-color-white-100);
+          border-radius: 50%;
+          bottom: 0;
+          color: var(--brand-color-green-200);
+          filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.35));
+          font-family: 'Lato';
+          font-size: var(--font-size-16);
+          font-weight: var(--font-weight-bold);
+          height: 20px;
+          line-height: 19px;
+          position: absolute;
+          right: -1px;
+          text-align: center;
+          width: 20px;
+        }
+    }
 `;
 
 export const Nav = styled.nav`
