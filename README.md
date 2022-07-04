@@ -77,6 +77,7 @@ Iniciando a Aplicação:
 - Context
 - Styled-Components
 - Axios
+- React Cokies
 - Eslint
 - Git MSG Linter
 
