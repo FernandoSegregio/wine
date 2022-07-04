@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teste Front-end Wine
 
-## Getting Started
+Aplicação consiste no desenvolvimento do menu loja da Wine seguindo o prototipo proposto.
 
-First, run the development server:
+
+# Link Aplicação
+
+- Deploy  no Vercel: https://wine-fernandosegregio.vercel.app/
+
+ 
+## Demo
+![wine](https://user-images.githubusercontent.com/86169953/177075309-f934a666-6adc-4b5f-a10a-bbb6ef5138b7.png)
+
+# Aplicação
+
+## Frontend
+
+Aplicação em React, desenvolvida com Next.js, TypeScript e Styled Components.
+
+# Executando
+
+## Rodar Localmente no Ambiente de Desenvolvimento.
+
+Para rodar a aplicação você deve rodar localmente com node.
+
+<details>
+
+<summary><b>Node</b></summary>
+
+## Pré-Requisitos
+
+Para rodar a aplicação é necessário ter instalado o [Node](https://nodejs.org/en/)
+
+## Rodando no Node
+
+Veja os comandos abaixo:
+
+Clone o projeto:
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone git@github.com:FernandoSegregio/wine.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navegue até o diretório do projeto:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd wine-challenge
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Instalando as dependências:
+```bash
+  npm install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Iniciando a Aplicação:
+```bash
+ npm run dev
+```
+</details>
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Agora o projeto já está rodando.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  http://localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+</details>
 
-## Deploy on Vercel
+# Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- React
+- Next.js
+- TypeScript
+- React Hooks
+- Gerenciamento de estado
+- Context
+- Styled-Components
+- Axios
+- Eslint
+- Git MSG Linter
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Authors
+
+- [Fernando Segregio](https://github.com/FernandoSegregio)
