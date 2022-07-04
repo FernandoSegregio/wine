@@ -14,7 +14,11 @@ function Cart() {
           <BsArrowLeft />
         </button>
         <p>WineBox</p>
-        <span>(0)</span>
+        <span>
+          (
+          {cartList.length}
+          )
+        </span>
       </HeaderCart>
       <section>
         { cartList.length === 0 ? (
