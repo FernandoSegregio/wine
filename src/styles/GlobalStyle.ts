@@ -51,6 +51,7 @@ const GlobalStyle = createGlobalStyle`
     --brand-color-yellow-100:  #F9B950;
     --brand-color-pink-050:  #b6116e61;
     --brand-color-pink-100:  #B6116E;
+   
 
   }
    
