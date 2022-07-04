@@ -12,7 +12,9 @@ import cartIcon from '../../../public/images/header/cart.svg';
 import { WineContext } from '../../context/wine';
 
 function Header() {
-  const { setOpenCart, setOpenSearch, openSearch } = useContext(WineContext);
+  const {
+    setOpenCart, setOpenSearch, openSearch, cartList,
+  } = useContext(WineContext);
 
   function openAndCloseSearch() {
     return openSearch ? setOpenSearch(false) : setOpenSearch(true);
@@ -71,6 +73,7 @@ function Header() {
             width={56}
             height={56}
           />
+          <span>{cartList.length}</span>
         </button>
       </IconsHeader>
     </HeaderContainer>

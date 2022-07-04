@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Image from 'next/image';
 import Router from 'next/router';
 import { useCookies } from 'react-cookie';
@@ -19,11 +19,18 @@ import {
 import { WineProps } from '../../interfaces';
 import blackIcon from '../../../public/images/card/black-wine.svg';
 import { WineContext } from '../../context/wine';
+import { addLocalStorage, restoreCartList } from '../../helpers';
 
 function Card({ winesApi }: WineProps) {
   const [cookie, setCookie] = useCookies<string>(['wine']);
 
-  const { quantity, setQuantity, winesFiltered } = useContext(WineContext);
+  const {
+    quantity, setQuantity, winesFiltered, cartList, setCartList,
+  } = useContext(WineContext);
+
+  useEffect(() => {
+    restoreCartList(setCartList);
+  }, [])
 
   function nextDetailsWine(id: number) {
     const wine = winesApi.find((item: { id: number; }) => item.id === id);
@@ -37,6 +44,14 @@ function Card({ winesApi }: WineProps) {
   }
 
   const renderWines = ((winesFiltered.length > 0) ? winesFiltered.slice(0, quantity) : winesApi)
+
+  function addToCart(e: { currentTarget: { value: string } }) {
+    const { value } = e.currentTarget;
+    const item = renderWines.filter((wine) => wine.id === Number(value));
+
+    setCartList([...cartList, ...item])
+    addLocalStorage(cartList);
+  }
 
   return (
     <>
@@ -90,7 +105,12 @@ function Card({ winesApi }: WineProps) {
               </NonMember>
             </section>
           </button>
-          <ButtonAdd>ADICIONAR</ButtonAdd>
+          <ButtonAdd
+            onClick={(e) => addToCart(e)}
+            value={item.id}
+          >
+            ADICIONAR
+          </ButtonAdd>
         </CardContainer>
       ))}
     </>
