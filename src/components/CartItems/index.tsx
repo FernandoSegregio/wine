@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { BsArrowLeft } from 'react-icons/bs'
 import { WineContext } from '../../context/wine';
+import CardCart from '../CardCart';
 import { CartContainer, HeaderCart } from './style';
 
 function Cart() {
-  const { openCart, setOpenCart } = useContext(WineContext);
+  const { openCart, setOpenCart, cartList } = useContext(WineContext);
 
   return (
     <CartContainer hidden={!openCart}>
@@ -16,10 +17,14 @@ function Cart() {
         <span>(0)</span>
       </HeaderCart>
       <section>
-        <p>
-          =(
-        </p>
-        <p>Você ainda não escolheu seus produtos</p>
+        { cartList.length === 0 ? (
+          <>
+            <p>
+              =(
+            </p>
+            <p>Você ainda não escolheu seus produtos</p>
+          </>
+        ) : <CardCart />}
       </section>
     </CartContainer>
   )

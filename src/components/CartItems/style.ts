@@ -17,8 +17,8 @@ export const CartContainer = styled.div`
   z-index: 2;
 
     section {
-      padding: 40px 30px;
-      text-align: center;
+      padding: 15px 15px;
+      text-align: flex-start;
 
         & > p:nth-of-type(1) {
           color: var(--brand-color-gray-075);

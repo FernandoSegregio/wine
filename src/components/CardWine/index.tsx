@@ -48,8 +48,7 @@ function Card({ winesApi }: WineProps) {
   function addToCart(e: { currentTarget: { value: string } }) {
     const { value } = e.currentTarget;
     const item = renderWines.filter((wine) => wine.id === Number(value));
-
-    setCartList([...cartList, ...item])
+    setCartList([...cartList, ...item]);
     addLocalStorage(cartList);
   }
 
