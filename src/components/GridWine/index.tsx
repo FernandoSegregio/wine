@@ -5,7 +5,7 @@ import Card from '../CardWine'
 import { GridContainer, ViewMore } from './style'
 
 function Grid({ winesApi }: WineProps) {
-  const { setQuantity, quantity, winesFiltered } = useContext(WineContext)
+  const { setQuantityRender, quantityRender, winesFiltered } = useContext(WineContext)
   return (
     <>
       <GridContainer>
@@ -14,7 +14,7 @@ function Grid({ winesApi }: WineProps) {
       { winesFiltered.length > 0 && (
       <ViewMore
         type="button"
-        onClick={() => setQuantity(quantity + 12)}
+        onClick={() => setQuantityRender(quantityRender + 12)}
       >
         Ver mais
       </ViewMore>

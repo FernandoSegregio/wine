@@ -19,6 +19,14 @@ export interface ApiItems {
   quantity?: number;
 }
 
+export interface CartItems {
+  id: number;
+  image: string;
+  name: string;
+  priceMember: number;
+  quantity: number;
+}
+
 export interface Wine {
   wineItem: ApiItems;
 }

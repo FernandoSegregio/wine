@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-assign */
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect } from 'react'
 import Image from 'next/image';
@@ -25,7 +26,7 @@ function Card({ winesApi }: WineProps) {
   const [cookie, setCookie] = useCookies<string>(['wine']);
 
   const {
-    quantity, setQuantity, winesFiltered, cartList, setCartList,
+    quantityRender, setQuantityRender, winesFiltered, cartList, setCartList,
   } = useContext(WineContext);
 
   useEffect(() => {
@@ -43,13 +44,44 @@ function Card({ winesApi }: WineProps) {
     Router.push({ pathname: `/loja-vinhos/${id}` })
   }
 
-  const renderWines = ((winesFiltered.length > 0) ? winesFiltered.slice(0, quantity) : winesApi)
+  const renderWines = ((winesFiltered.length > 0)
+    ? winesFiltered.slice(0, quantityRender)
+    : winesApi)
 
   function addToCart(e: { currentTarget: { value: string } }) {
     const { value } = e.currentTarget;
     const item = renderWines.filter((wine) => wine.id === Number(value));
-    setCartList([...cartList, ...item]);
-    addLocalStorage(cartList);
+
+    const cart = {
+      id: item[0].id,
+      quantity: 1,
+      name: item[0].name,
+      image: item[0].image,
+      priceMember: item[0].priceMember,
+    }
+
+    if (cartList.length === 0) {
+      setCartList([cart]);
+      addLocalStorage([cart]);
+    }
+
+    if (cartList.length > 0) {
+      const varifyCartList = cartList.filter((it) => it.id === cart.id)
+      const itemIndex = cartList.findIndex((i) => i.id === Number(value));
+      console.log('sou o varifyCartList', varifyCartList);
+
+      if (varifyCartList.length === 0) {
+        setCartList([...cartList, cart]);
+        addLocalStorage([...cartList, cart]);
+      }
+
+      if (varifyCartList.length > 0) {
+        const newCart = [...cartList]
+        newCart[itemIndex].quantity = newCart[itemIndex].quantity += 1
+        setCartList(newCart)
+        addLocalStorage(newCart)
+      }
+    }
   }
 
   return (
@@ -63,7 +95,7 @@ function Card({ winesApi }: WineProps) {
             <section>
               <ImageStyle
                 src={item.image}
-                alt="teste"
+                alt={item.name}
                 height={178}
                 width={119}
               />

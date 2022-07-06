@@ -1,16 +1,16 @@
 import React, {
   createContext, Dispatch, SetStateAction, useMemo, useState,
 } from 'react';
-import { ApiItems } from '../interfaces';
+import { ApiItems, CartItems } from '../interfaces';
 
 interface InterWineContext {
-  quantity: number;
+  quantityRender: number;
   winesFiltered: ApiItems[];
   openCart: boolean;
   openSearch: boolean;
-  cartList: ApiItems[];
-  setCartList: Dispatch<SetStateAction<ApiItems[]>>;
-  setQuantity: Dispatch<SetStateAction<number>>;
+  cartList: CartItems[];
+  setCartList: Dispatch<SetStateAction<CartItems[]>>;
+  setQuantityRender: Dispatch<SetStateAction<number>>;
   setOpenCart: Dispatch<SetStateAction<boolean>>;
   setOpenSearch: Dispatch<SetStateAction<boolean>>;
   setWinesFiltered: Dispatch<SetStateAction<ApiItems[]>>
@@ -26,11 +26,11 @@ export function WineProvider({ children }: InterWineProvider) {
   const [openSearch, setOpenSearch] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const [winesFiltered, setWinesFiltered] = useState([] as ApiItems[]);
-  const [quantity, setQuantity] = useState(12);
-  const [cartList, setCartList] = useState([] as ApiItems[]);
+  const [quantityRender, setQuantityRender] = useState(12);
+  const [cartList, setCartList] = useState([] as CartItems[]);
 
   const context = useMemo(() => ({
-    quantity,
+    quantityRender,
     winesFiltered,
     openCart,
     openSearch,
@@ -39,8 +39,8 @@ export function WineProvider({ children }: InterWineProvider) {
     setOpenCart,
     setOpenSearch,
     setWinesFiltered,
-    setQuantity,
-  }), [openCart, openSearch, winesFiltered, quantity, cartList]);
+    setQuantityRender,
+  }), [openCart, openSearch, winesFiltered, quantityRender, cartList]);
 
   return (
     <WineContext.Provider value={context}>

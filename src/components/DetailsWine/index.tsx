@@ -1,8 +1,11 @@
+/* eslint-disable no-multi-assign */
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React, { useContext } from 'react'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
 import { RiArrowRightSLine } from 'react-icons/ri'
+import { WineContext } from '../../context/wine';
+import { addLocalStorage } from '../../helpers';
 import {
   DetailsContainer,
   ImageContainer,
@@ -13,8 +16,44 @@ import {
 } from './style';
 
 function DetailsWine(props: { wineItem: string; }) {
+  const { cartList, setCartList } = useContext(WineContext);
   const { wineItem } = props
   const wine = JSON.parse(wineItem)
+
+  function addToCart(e: { currentTarget: { value: string } }) {
+    const { value } = e.currentTarget;
+
+    const cart = {
+      id: wine.id,
+      quantity: 1,
+      name: wine.name,
+      image: wine.image,
+      priceMember: wine.priceMember,
+    }
+
+    if (cartList.length === 0) {
+      setCartList([cart]);
+      addLocalStorage([cart]);
+    }
+
+    if (cartList.length > 0) {
+      const varifyCartList = cartList.filter((it) => it.id === cart.id)
+      const itemIndex = cartList.findIndex((i) => i.id === Number(value));
+      console.log('sou o varifyCartList', varifyCartList);
+
+      if (varifyCartList.length === 0) {
+        setCartList([...cartList, cart]);
+        addLocalStorage([...cartList, cart]);
+      }
+
+      if (varifyCartList.length > 0) {
+        const newCart = [...cartList]
+        newCart[itemIndex].quantity = newCart[itemIndex].quantity += 1
+        setCartList(newCart)
+        addLocalStorage(newCart)
+      }
+    }
+  }
 
   return (
     <DetailsContainer>
@@ -65,7 +104,7 @@ function DetailsWine(props: { wineItem: string; }) {
           <h3>Comentário do Sommelier</h3>
           <p>{wine.sommelierComment}</p>
         </SommelierContainer>
-        <button type="button">Adicionar</button>
+        <button type="button" onClick={(e) => addToCart(e)}>Adicionar</button>
       </Details>
     </DetailsContainer>
   )
