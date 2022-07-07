@@ -75,3 +75,54 @@ export const HeaderCart = styled.header`
     font-weight: var(--font-weight-normal);
     } 
 `;
+
+export const FooterCart = styled.footer`
+  align-items: center;
+  background-color: var(--brand-color-white-100);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+  padding: 0 10px;
+  position: fixed;
+  width: 350px;
+
+    div {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+
+        & > h3 {
+          color: var(--brand-color-gray-200);
+          font-family: 'Lato';
+          font-size: var(--font-size-20);
+          font-weight: var(--font-weight-600)
+        }
+
+        & > h1 {
+          color: var(--brand-color-pink-100);
+          font-family: 'Lato';
+          font-weight: var(--font-weight-normal);
+          font-size: var(--font-size-28);
+        }
+
+    }
+
+    button {
+        background-color: var(--brand-color-green-100);
+        border-radius: 4px;
+        border: none;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+        color: var(--brand-color-white-100);
+        font-family: 'Lato';
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-bold);
+        height: 50px;
+        line-height: 19px;
+        padding: 10px;
+        text-align: center;
+        width: 90%;
+      }
+`;
