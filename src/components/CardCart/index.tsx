@@ -9,7 +9,7 @@ import { addLocalStorage } from '../../helpers';
 function CardCart() {
   const { cartList, setCartList } = useContext(WineContext);
 
-  function incrementItem(e: { currentTarget: { value: string } }) {
+  function incrementItem(e: React.MouseEvent<HTMLButtonElement>) {
     const { value } = e.currentTarget;
 
     const itemIndex = cartList.findIndex((i) => i.id === Number(value));
