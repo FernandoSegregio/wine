@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const AsideContainer = styled.aside`
+
   h1 {
     color: var(--brand-color-black-200);
     font-family: Lato;
@@ -20,6 +21,24 @@ export const AsideContainer = styled.aside`
     margin-bottom: 16px;
   }
 
+  @media screen and (max-width: 1220px) {
+    & > h1 {
+      margin-bottom: 16px;
+    }
+    
+    & > p {
+      margin-bottom: 0;
+    }
+
+    & > div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 60%;
+      margin: 16px;
+      column-gap: 15px;
+      }
+    }
+
 `;
 
 export const BorderInput = styled.label`
@@ -34,6 +53,10 @@ export const BorderInput = styled.label`
       font-weight: var(--font-weight-normal);
       line-height: 42px;   
       margin-left: 31.6px;
+
+      @media screen and (max-width: 1220px) {
+        margin-left:20px;
+      }
       
       
 

@@ -44,7 +44,7 @@ export const IconsHeader = styled.div`
           color: var(--brand-color-green-200);
           filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.35));
           font-family: 'Lato';
-          font-size: var(--font-size-16);
+          font-size: var(--font-size-12);
           font-weight: var(--font-weight-bold);
           height: 20px;
           line-height: 19px;

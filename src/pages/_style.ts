@@ -6,6 +6,12 @@ const Container = styled.div`
   grid-template-columns: 256px 1fr;
   padding: 38.77px 160px;
 
+    @media screen and (max-width: 1220px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 38.77px 70px;
+    }
+
     & main > h1 > span {
     color: var(--brand-color-gray-350);
     font-family: Lato;

@@ -48,18 +48,19 @@ export const Details = styled.div`
   margin-top: 80.77px;
 
     button {
+      background-color: var(--brand-color-green-100);
       border-radius: 4px;
       border: none;
-      color: var(--brand-color-white-100);
-      height: 56px;
-      width: 328px;
-      background-color: var(--brand-color-green-100);
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+      color: var(--brand-color-white-100);
       font-family: 'Lato';
-      font-weight: var(--font-weight-bold);
       font-size: var(--font-size-16);
+      font-weight: var(--font-weight-bold);
+      height: 56px;
       line-height: 19px;
+      padding: 10px;
       text-align: center;
+      width: 328px;
     }
 `;
 
@@ -175,6 +176,9 @@ export const SommelierContainer = styled.div`
       font-size: var(--font-size-14);
       line-height: 21px;
       color: var(--brand-color-gray-200);
+      height: 120px;
+      overflow: overlay;
+      padding-right: 20px;
 
     }
 `;

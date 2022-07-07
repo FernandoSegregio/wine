@@ -17,8 +17,14 @@ export const CartContainer = styled.div`
   z-index: 2;
 
     section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 15px 15px;
       text-align: flex-start;
+      height: 400px;
+      overflow: overlay;
+      padding-right: 20px;
 
         & > p:nth-of-type(1) {
           color: var(--brand-color-gray-075);

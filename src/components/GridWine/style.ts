@@ -4,7 +4,7 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  width: 832px;
+  width: 100%;
   gap: 32px;
 `;
 
