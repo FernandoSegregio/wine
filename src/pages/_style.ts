@@ -9,7 +9,7 @@ const Container = styled.div`
     @media screen and (max-width: 1220px) {
       display: grid;
       grid-template-columns: 1fr;
-      padding: 38.77px 70px;
+      padding: 38.77px 12%;
     }
 
     & main > h1 > span {
