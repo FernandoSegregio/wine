@@ -48,7 +48,7 @@ function Card({ winesApi }: WineProps) {
     ? winesFiltered.slice(0, quantityRender)
     : winesApi)
 
-  function addToCart(e: { currentTarget: { value: string } }) {
+  function addToCart(e: React.MouseEvent<HTMLButtonElement>) {
     const { value } = e.currentTarget;
     const item = renderWines.filter((wine) => wine.id === Number(value));
 

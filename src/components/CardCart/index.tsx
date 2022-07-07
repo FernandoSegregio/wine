@@ -20,7 +20,7 @@ function CardCart() {
     addLocalStorage(newCart);
   }
 
-  function decrementItem(e: { currentTarget: { value: string } }) {
+  function decrementItem(e: React.MouseEvent<HTMLButtonElement>) {
     const { value } = e.currentTarget;
 
     const itemIndex = cartList.findIndex((i) => i.id === Number(value));

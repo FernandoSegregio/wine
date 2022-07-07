@@ -20,7 +20,7 @@ function DetailsWine(props: { wineItem: string; }) {
   const { wineItem } = props
   const wine = JSON.parse(wineItem)
 
-  function addToCart(e: { currentTarget: { value: string } }) {
+  function addToCart(e: React.MouseEvent<HTMLButtonElement>) {
     const { value } = e.currentTarget;
 
     const cart = {
