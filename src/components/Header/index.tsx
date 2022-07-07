@@ -73,7 +73,10 @@ function Header() {
             width={56}
             height={56}
           />
-          <span>{cartList.length}</span>
+          <span>
+            {cartList.length > 0 ? cartList
+              .map((item) => item.quantity).reduce((a, b) => a + b) : 0 }
+          </span>
         </button>
       </IconsHeader>
     </HeaderContainer>

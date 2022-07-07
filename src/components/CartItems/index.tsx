@@ -16,7 +16,8 @@ function Cart() {
         <p>WineBox</p>
         <span>
           (
-          {cartList.length}
+          {cartList.length > 0 ? cartList
+            .map((item) => item.quantity).reduce((a, b) => a + b) : 0 }
           )
         </span>
       </HeaderCart>
