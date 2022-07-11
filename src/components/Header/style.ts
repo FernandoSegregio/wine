@@ -4,11 +4,11 @@ export const HeaderContainer = styled.header`
   align-items: center;
   background-color: var(--brand-color-white-100);
   border-bottom: 2px solid var(--brand-color-gray-050);
-  column-gap: 217.13px;
+  column-gap: 18%;
   display: flex;
   height: 88.23px;
   justify-content: center;
-  width: 100%;
+  padding: 0 100px; 
 
   .loja-vinhos {
       border-bottom: 4px solid var(--brand-color-pink-100);
@@ -16,11 +16,21 @@ export const HeaderContainer = styled.header`
         color: var(--brand-color-pink-100)
       };
     }
+
+      @media screen and (max-width: 1100px) {
+            justify-content: space-between;
+      }
 `;
 
 export const LogoAndNav = styled.div`
+  align-items: center;
   column-gap: 83.15px;
   display: flex;
+
+    span {
+      height: 28px !important;
+      width: 100px !important;
+    }
 `;
 
 export const IconsHeader = styled.div`
@@ -32,6 +42,9 @@ export const IconsHeader = styled.div`
     button {
       background-color: transparent;
       border: none;
+      height: 56px;
+      width: 56px;
+      margin: 0 6px;
     }
 
     button:nth-of-type(3) {
@@ -60,6 +73,13 @@ export const Nav = styled.nav`
   align-items: center;
   display: flex;
   height: 88.23px;
+
+      @media screen and (max-width: 1100px) {
+        height: 0;
+        justify-content: space-between;
+        visibility: hidden;
+        width: 0;
+      }
 `;
 
 export const Ul = styled.ul`
