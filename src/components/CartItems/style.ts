@@ -14,7 +14,7 @@ export const CartContainer = styled.div`
   transition-property: all;
   transition-timing-function: ease;
   width: 350px;
-  z-index: 2;
+  z-index: 1;
 
     section {
       display: flex;
