@@ -12,6 +12,10 @@ const SearchContainer = styled.div`
   display: flex;
   justify-content: center;
 
+    form {
+      width: 80%;
+    }
+
     input {
       border-radius: 4px;
       border: unset;
@@ -22,17 +26,18 @@ const SearchContainer = styled.div`
       height: 44px;
       outline: none;
       padding-left: 30px;
-      width: 1160px;
+      width: 100%;
     }
 
     svg {
       color: var(--brand-color-pink-100);
       height: 26px;
       position: absolute;
-      right: 144px;
+      margin-right: 22px;
+      right: 10%;
       top: 26px;
-      width: 26px;
       transform: rotate(270deg);
+      width: 26px;
     }
 `;
 
