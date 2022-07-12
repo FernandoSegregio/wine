@@ -126,3 +126,14 @@ export const FooterCart = styled.footer`
         width: 90%;
       }
 `;
+
+export const CloseCart = styled.button`
+  background-color: var(--brand-color-black-200);
+  opacity: 0.3;
+  border: none;
+  height: 100vw;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+`;
